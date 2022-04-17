@@ -10,3 +10,15 @@ C:\Users\gasto\source\repos\MiCalculadora\Entidades\obj\Debug\net5.0\Entidades.d
 C:\Users\gasto\source\repos\MiCalculadora\Entidades\obj\Debug\net5.0\refint\Entidades.dll
 C:\Users\gasto\source\repos\MiCalculadora\Entidades\obj\Debug\net5.0\Entidades.pdb
 C:\Users\gasto\source\repos\MiCalculadora\Entidades\obj\Debug\net5.0\ref\Entidades.dll
+C:\Users\gasto\source\repos\tps_laboratorio_ii\Rando.Gaston.2D.TP1\Entidades\bin\Debug\net5.0\Entidades.deps.json
+C:\Users\gasto\source\repos\tps_laboratorio_ii\Rando.Gaston.2D.TP1\Entidades\bin\Debug\net5.0\Entidades.dll
+C:\Users\gasto\source\repos\tps_laboratorio_ii\Rando.Gaston.2D.TP1\Entidades\bin\Debug\net5.0\Entidades.pdb
+C:\Users\gasto\source\repos\tps_laboratorio_ii\Rando.Gaston.2D.TP1\Entidades\obj\Debug\net5.0\Entidades.csproj.AssemblyReference.cache
+C:\Users\gasto\source\repos\tps_laboratorio_ii\Rando.Gaston.2D.TP1\Entidades\obj\Debug\net5.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gasto\source\repos\tps_laboratorio_ii\Rando.Gaston.2D.TP1\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfoInputs.cache
+C:\Users\gasto\source\repos\tps_laboratorio_ii\Rando.Gaston.2D.TP1\Entidades\obj\Debug\net5.0\Entidades.AssemblyInfo.cs
+C:\Users\gasto\source\repos\tps_laboratorio_ii\Rando.Gaston.2D.TP1\Entidades\obj\Debug\net5.0\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\gasto\source\repos\tps_laboratorio_ii\Rando.Gaston.2D.TP1\Entidades\obj\Debug\net5.0\Entidades.dll
+C:\Users\gasto\source\repos\tps_laboratorio_ii\Rando.Gaston.2D.TP1\Entidades\obj\Debug\net5.0\refint\Entidades.dll
+C:\Users\gasto\source\repos\tps_laboratorio_ii\Rando.Gaston.2D.TP1\Entidades\obj\Debug\net5.0\Entidades.pdb
+C:\Users\gasto\source\repos\tps_laboratorio_ii\Rando.Gaston.2D.TP1\Entidades\obj\Debug\net5.0\ref\Entidades.dll

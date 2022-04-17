@@ -131,13 +131,16 @@ namespace Entidades
         private double ValidarOperando(string strNumero)
         {
             double retorno;
+            string cadena;
+
+            strNumero = strNumero.Replace('.', ',');
 
             if (double.TryParse(strNumero, out retorno) == false)
             {
                 retorno = 0;
             }
-
-            return retorno;
+            
+        return retorno;
         }
 
 

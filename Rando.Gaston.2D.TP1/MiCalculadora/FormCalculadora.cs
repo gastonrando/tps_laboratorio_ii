@@ -88,7 +88,7 @@ namespace MiCalculadora
         /// <param name="e"></param>
         private void btnOperar_Click(object sender, EventArgs e)
         {
-            // si no se cargó nada en los operandos y el operador, muestro 0 + 0
+            // ante la posibilidad de no cargar nada hace 0 + 0, el mas viene de operando.cs
             if (this.txtNumero1.Text == "")
             {
                 this.txtNumero1.Text = "0";
@@ -106,10 +106,11 @@ namespace MiCalculadora
             string numero2 = this.txtNumero2.Text;
             // tomo el valor del operador
             string operador = this.cmbOperador.GetItemText(this.cmbOperador.SelectedItem);
-            // si quiere dividir por cero mando alerta de error al label de resultado
+            // si quiere dividir por cero mando alerta de error al label de resultado, las consignas establecen el doouble.minvalue, no obstante no me agradaba.
+            //el double.minvalue esta hecho.
             if (numero2 == "0" && operador == "/")
             {
-                this.lblResultado.Text = "No se puede dividir por cero";
+                this.lblResultado.Text = "Error Matematico";
                 this.btnConvertirABinario.Enabled = false;
                 this.btnConvertirADecimal.Enabled = false;
             }
