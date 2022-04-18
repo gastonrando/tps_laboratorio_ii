@@ -4,7 +4,8 @@ using System.Text;
 namespace Entidades
 {
     public class Operando
-    {
+    {   
+        //Atributo
         private double numero;
 
         private string Numero
@@ -12,6 +13,11 @@ namespace Entidades
             set { this.numero = ValidarOperando(value); }
         }
 
+        /// <summary>
+        /// Pasa el resultado de binario a decimal
+        /// </summary> mide la longitud del numero para llevar a cabo la conversion, reversa el sentido de la cadena
+        /// <param name="binario">La variable a transformar es string</param>
+        /// <returns></returns> retorna un string del numero en binario, un mensaje o no hace nada si el numero no es binario.
         public string BinarioDecimal(string binario)
         {
             int tamanio = binario.Length;
@@ -39,6 +45,11 @@ namespace Entidades
         }
 
 
+        /// <summary>
+        /// Si es posible, pasa de decimal a binario en double
+        /// </summary>
+        /// <param name="numero">Recibe el numero a convertir</param>
+        /// <returns></returns>devuelve el numero en binario
         public string DecimalBinario(double numero)
         {
             int resto;
@@ -64,6 +75,11 @@ namespace Entidades
             return resultado;
         }
 
+        /// <summary>
+        /// Si es posible, pasa de decimal a binario en string
+        /// </summary>
+        /// <param name="numero"></param>
+        /// <returns></returns>
         public string DecimalBinario(string numero)
         {
             string resultado = "";
@@ -75,10 +91,14 @@ namespace Entidades
             }
             return resultado;
         }
+
+        //Constructor
         public Operando()
         {
             this.numero = 0;
         }
+        
+        //Constructor
         public Operando(double numero)
         {
             this.numero = numero;
@@ -115,6 +135,11 @@ namespace Entidades
             return n1.numero + n2.numero;
         }
 
+        /// <summary>
+        /// revisa que el numero sea binario
+        /// </summary>
+        /// <param name="binario"></param>
+        /// <returns></returns>
         private bool EsBinario(string binario)
         {
             bool retorno = true;
@@ -128,11 +153,15 @@ namespace Entidades
             }
             return retorno;
         }
+        /// <summary>
+        /// valida los numeros ingresados para poder operar
+        /// </summary>
+        /// <param name="strNumero"></param>
+        /// <returns></returns>
         private double ValidarOperando(string strNumero)
         {
             double retorno;
-            string cadena;
-
+            
             strNumero = strNumero.Replace('.', ',');
 
             if (double.TryParse(strNumero, out retorno) == false)

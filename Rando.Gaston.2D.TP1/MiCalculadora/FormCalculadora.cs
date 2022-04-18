@@ -31,33 +31,30 @@ namespace MiCalculadora
             this.btnConvertirADecimal.Enabled = false;
         }
         /// <summary>
-        /// Pone en "vacio" los campos del formulario
+        /// Vacia los campos del formulario
         /// </summary>
         private void Limpiar()
         {
             this.txtNumero1.Text = "";
             this.txtNumero2.Text = "";
             this.lblResultado.Text = "";
-            //this.cmbOperador.Text = "";
             this.cmbOperador.SelectedIndex = this.cmbOperador.FindStringExact(" ");
             this.lstOperaciones.Items.Clear();
         }
         /// <summary>
-        /// Al iniciar el formulario deshabilita los botones para vonertir decimal-binario y pone el operador en blanco
+        /// Al iniciar el formulario deshabilita los botones para convertir decimal a binario
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void FormCalculadora_Load(object sender, EventArgs e)
         {
             Limpiar();
-            // cargo en el combo de operador el primer valor " "
             this.cmbOperador.SelectedIndex = this.cmbOperador.FindStringExact(" ");
-            // Desactivo los botones de binario/decimal
             this.btnConvertirABinario.Enabled = false;
             this.btnConvertirADecimal.Enabled = false;
         }
         /// <summary>
-        /// Es la funcion que se llama al cerrar el form, pide confirmacion para cerrar
+        /// cierra el form
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>        
@@ -65,7 +62,7 @@ namespace MiCalculadora
         {
             if (e.CloseReason == CloseReason.UserClosing)
             {
-                DialogResult resultado = MessageBox.Show("¿Seguro de querer salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult resultado = MessageBox.Show("¿Seguro que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (resultado != DialogResult.Yes)
                 {
                     e.Cancel = true;
@@ -73,7 +70,7 @@ namespace MiCalculadora
             }
         }
         /// <summary>
-        /// Llama a la funcion para cerrar, pide confirmacion
+        /// cierra el form
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -82,7 +79,7 @@ namespace MiCalculadora
             this.Close();
         }
         /// <summary>
-        /// Valida si se va a dividir por cero, llama a la funcion operar
+        /// revisa que no se este dividiendo por cero, invoca a la funcion operar.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -101,10 +98,8 @@ namespace MiCalculadora
             {
                 this.cmbOperador.SelectedIndex = 1;
             }
-            // tomo los valores de los operandos
             string numero1 = this.txtNumero1.Text;
             string numero2 = this.txtNumero2.Text;
-            // tomo el valor del operador
             string operador = this.cmbOperador.GetItemText(this.cmbOperador.SelectedItem);
             // si quiere dividir por cero mando alerta de error al label de resultado, las consignas establecen el doouble.minvalue, no obstante no me agradaba.
             //el double.minvalue esta hecho.
@@ -117,13 +112,9 @@ namespace MiCalculadora
             else // si no, opero normal
             {
 
-                // mando a operar
                 double resultado = Operar(numero1, numero2, operador);
-                // Mando el resultado al label de resultado
                 this.lblResultado.Text = resultado.ToString();
-                // Agrego al historial de operaciones            
                 this.lstOperaciones.Items.Insert(0, $"{this.txtNumero1.Text} {operador} {this.txtNumero2.Text} = {resultado}");
-                // Activo los botones de binario/decimal
                 this.btnConvertirABinario.Enabled = true;
                 this.btnConvertirADecimal.Enabled = true;
             }
